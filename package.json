@@ -1,0 +1,29 @@
+{
+  "name": "challenge-currency",
+  "description": "John Ahn's submission for Currency's coding challenge",
+  "version": "1.0.0",
+  "engines": {
+    "node": "8.12.0",
+    "npm": "6.4.1"
+  },
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "nodemon server.js",
+    "prodclient": "cd client && npm start",
+    "prodserver": "node server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run-script server\" \"npm run-script client\"",
+    "prod": "concurrently --kill-others-on-fail \"npm run-script prodserver\" \"npm run-script prodclient\""
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "eslint-config-google": "^0.11.0",
+    "express": "^4.16.2",
+    "moment": "^2.23.0",
+    "mongoose": "^5.3.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
+  }
+}
